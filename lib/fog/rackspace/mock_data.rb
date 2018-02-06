@@ -40,7 +40,6 @@ module Fog
               "OS-DCF:diskConfig" => "AUTO",
               "created" => "2012-02-28T19:38:57Z",
               "id" => image_id,
-              "name" => "Ubuntu",
               "links" => [
                 {
                   "href" => "https://dfw.servers.api.rackspacecloud.com/v2/010101/images/#{image_id}",

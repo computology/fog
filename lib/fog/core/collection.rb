@@ -147,10 +147,10 @@ module Fog
   # 'Marker' option along as self.filters[:marker]
   class PagedCollection < Collection
 
-    def each(filters=filters)
+    def each(collection_filters=filters)
       if block_given?
         begin
-          page = self.all(filters)
+          page = self.all(collection_filters)
           # We need to explicitly use the base 'each' method here on the page, otherwise we get infinite recursion
           base_each = Fog::Collection.instance_method(:each)
           base_each.bind(page).call { |item| yield item }
